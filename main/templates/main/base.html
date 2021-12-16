@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <div class="body_inner">
+        <header>
+            <div class="header_logo">
+
+            </div>
+            <nav>
+                {% block nav %}{% endblock %}
+            </nav>
+        </header>
+        {% block content %}{% endblock %}
+        <div class="emptyspace" id="emptyspace"></div>
+    </div>
+
+    <script src="{% static 'main/js/jquery.js' %}"></script>
+    <script src="{% static 'main/js/maskedinput.js' %}"></script>
+    <script src="{% static 'main/js/toast.js' %}"></script>
+    <script src="{% static 'main/js/base.js' %}"></script>
+    {% block script %}{% endblock %}
+    <script src="{% static 'main/js/rm_get_from_addressbar.js' %}"></script>
+</body>
+</html>

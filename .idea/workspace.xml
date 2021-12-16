@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f89b3d8d-c9fd-4696-babe-5de53c41e87b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/kp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0002_roomclass_numberofpeople.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0003_auto_20211127_0001.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0004_roomclass_comment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0005_foodtype_comment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0006_auto_20211128_0010.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0007_remove_room_hotelnumber.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0008_alter_visitor_phonenumber.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0009_auto_20211209_0504.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0010_auto_20211211_1710.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0011_auto_20211211_1720.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0012_auto_20211211_1722.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0013_alter_visitor_visitorid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0014_food_included.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/toast.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/up_add_order.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/up_edit_order.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/user_panel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/fonts/MontserratAlternates-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/fonts/MontserratAlternates-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/images/calendar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/images/disabled.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/images/empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/add_order1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/add_order2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/base.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/citizenship_other.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/edit_order.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/rm_get_from_addressbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/toast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/user_panel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/up_add_order1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/up_add_order2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/up_edit_order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/up_edit_password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/up_edit_personal_info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/user_panel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="22LUAnvB5hK9Fo9R3Plew1yNjHr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="flowers" type="Python.DjangoServer" factoryName="Django server">
+      <module name="flowers" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f89b3d8d-c9fd-4696-babe-5de53c41e87b" name="Changes" comment="" />
+      <created>1639616224422</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639616224422</updated>
+      <workItem from="1639616227344" duration="32000" />
+      <workItem from="1639616261985" duration="3560000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
