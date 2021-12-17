@@ -1,0 +1,32 @@
+.form-select {
+    width: 500px;
+}
+
+.form-control {
+    width: 500px;
+}
+
+.card-body {
+    width: 500px;
+    text-align: left;
+}
+
+.flower {
+    width: 4500px;
+
+}
+
+.center_div {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.form_flower_cnt {
+    width: 70px;
+    display: inherit;
+}
+
+.btn-center {
+    display: block;
+    margin: 0 auto;
+}

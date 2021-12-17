@@ -1,0 +1,110 @@
+*, ::after, ::before {
+    margin: 0 auto;
+    box-sizing:border-box;
+}
+
+body {
+    background-color: #EBEBEE;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: darkgray;
+}
+
+@font-face {
+    font-family: 'Bilbo_Regular';
+    src: url('../fonts/BilboSwashCaps-Regular.woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MontserratAlt_Bold;
+    src: url('../fonts/MontserratAlternates-Bold.woff2');
+}
+
+@font-face {
+    font-family: MontserratAlt_Light;
+    src: url('../fonts/MontserratAlternates-Regular.woff2');
+}
+
+@font-face {
+    font-family: Montserrat_Bold;
+    src: url('../fonts/Montserrat-Bold.woff2');
+}
+
+.container {
+    width: 1256px;
+    margin: 0 auto;
+}
+
+.webpage {
+    width: 1440px;
+    background-color: #FFFFFF;
+}
+
+.header {
+    background-color: rgba(97, 46, 118, 0.76); /*#7d4096e0*/
+    width:100%;
+}
+
+.header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+}
+
+.logo {
+    font-family:'Bilbo_Regular';
+    font-style: normal;
+    font-size: 85px;
+    line-height: 90px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 105px;
+}
+
+.logo-item:hover {
+    color: #343434;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    /*font-family: MontserratAlt_Bold;*/
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+}
+
+.nav-link {
+    font-family:MontserratAlt_Light;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 35px;
+    color: white;
+}
+
+.nav-link:hover {
+    color: rgb(52, 52, 52);
+}
+
+h1 {
+    text-align: center;
+}

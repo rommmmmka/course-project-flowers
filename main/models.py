@@ -42,19 +42,22 @@ class Delivery(models.Model):
 class Flower(models.Model):
     flower_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30, blank=True, null=True)
-    photo = models.CharField(max_length=70, blank=True, null=True)
+    photo = models.ImageField(upload_to='images/', verbose_name='Фотография букета')
     price = models.DecimalField(max_digits=7, decimal_places=2, blank=True, null=True)
     category = models.ForeignKey(Category, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
         managed = False
         db_table = 'flower'
+        app_label = 'main'
 
 
 class FlowerList(models.Model):
     flower_list_id = models.AutoField(primary_key=True)
+    count = models.IntegerField(blank=True, null=True)
     orders = models.ForeignKey('Orders', models.DO_NOTHING, blank=True, null=True)
     flower = models.ForeignKey(Flower, models.DO_NOTHING, blank=True, null=True)
+
 
     class Meta:
         managed = False

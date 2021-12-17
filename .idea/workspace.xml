@@ -2,71 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f89b3d8d-c9fd-4696-babe-5de53c41e87b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/main/static/main/css/add_order.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/css/catalog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/css/orders.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/css/staff.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/fonts/BilboSwashCaps-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/fonts/Montserrat-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/fonts/MontserratAlternates-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/fonts/MontserratAlternates-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/static/main/js/add_order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/add_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/catalog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/staff.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/kp/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0002_roomclass_numberofpeople.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0003_auto_20211127_0001.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0004_roomclass_comment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0005_foodtype_comment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0006_auto_20211128_0010.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0007_remove_room_hotelnumber.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0008_alter_visitor_phonenumber.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0009_auto_20211209_0504.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0010_auto_20211211_1710.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0011_auto_20211211_1720.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0012_auto_20211211_1722.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0013_alter_visitor_visitorid.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/migrations/0014_food_included.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/css/toast.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/css/up_add_order.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/css/up_edit_order.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/css/user_panel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/fonts/MontserratAlternates-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/fonts/MontserratAlternates-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/images/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/images/calendar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/images/disabled.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/images/empty.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/add_order1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/add_order2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/citizenship_other.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/edit_order.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/rm_get_from_addressbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/toast.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/static/main/js/user_panel.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/main/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/main/up_add_order1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/main/up_add_order2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/main/up_edit_order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/main/up_edit_password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/main/up_edit_personal_info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/templates/main/user_panel.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -82,17 +60,35 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="22LUAnvB5hK9Fo9R3Plew1yNjHr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/templates/main" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\flowers\main\templates\main" />
+      <recent name="C:\Users\user\PycharmProjects\flowers\main\static\main\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\PycharmProjects\flowers\main\templates\main" />
+      <recent name="C:\Users\user\PycharmProjects\flowers\main\static\main\css" />
+      <recent name="C:\Users\user\PycharmProjects\flowers\main\static\main\fonts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.add_order.html">
+    <configuration name="add_order.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/flowers/main/templates/main/add_order.html?_ij_reload" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="flowers" type="Python.DjangoServer" factoryName="Django server">
       <module name="flowers" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -116,6 +112,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.add_order.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -126,7 +127,8 @@
       <option name="presentableId" value="Default" />
       <updated>1639616224422</updated>
       <workItem from="1639616227344" duration="32000" />
-      <workItem from="1639616261985" duration="3560000" />
+      <workItem from="1639616261985" duration="9563000" />
+      <workItem from="1639684572837" duration="22145000" />
     </task>
     <servers />
   </component>
@@ -143,5 +145,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/course-project-flowers" />
+    </ignored-roots>
   </component>
 </project>

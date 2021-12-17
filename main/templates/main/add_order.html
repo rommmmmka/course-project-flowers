@@ -1,0 +1,90 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Заказы
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/add_order.css' %}">
+{% endblock %}
+
+{% block content %}
+    <form onsubmit="return catchSubmit(event)" action="{% url 'action_add_order' %}" method="post">
+        {% csrf_token %}
+        <div class="center_div">
+            <h1>Добавление заказа</h1>
+            <h3>Клиент</h3>
+            <div>
+                <input type="text" class="form-control" name="lname" placeholder="Фамилия" minlength="5" maxlength="30" pattern="[А-я]+" required>
+            </div>
+            <div>
+                <input type="text" class="form-control" name="fname" placeholder="Имя" minlength="5" maxlength="30" pattern="[А-я]+" required>
+            </div>
+            <div>
+                <input type="text" class="form-control" name="mname" placeholder="Отчество (при наличии)" minlength="5" maxlength="30" pattern="[А-я]+">
+            </div>
+            <div>
+                <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Номер телефона" required>
+            </div>
+            <h3>Доставка</h3>
+            <div>
+                <input type="date" class="form-control" name="delivery_date" min="2021-12-20" required>
+            </div>
+            <div>
+                <input type="text" class="form-control" name="delivery_address" placeholder="Адрес доставки" minlength="5" maxlength="70" required>
+            </div>
+            <h3>Заказ</h3>
+            <div>
+                <select class="form-select" name="order_status" required>
+                    <option value="" disabled selected hidden>Статус заказа</option>
+                    {% for el in order_status %}
+                        <option value="{{ el.order_status_id }}">{{ el.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <select class="form-select" name="payment_type" required>
+                    <option value="" disabled selected hidden>Тип оплаты</option>
+                    {% for el in payment_type %}
+                        <option value="{{ el.payment_type_id }}">{{ el.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <h3>Выбор цветов</h3>
+        </div>
+        {% for cat in category %}
+            <div>
+                <div class="center_div">
+                    <button class="btn btn-primary mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    {{ cat.name }}
+                </button>
+                </div>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        {% for el in flowers %}
+                            {% if el.category_id == cat.category_id %}
+                                <div class="flower">
+                                    <label>
+                                        <input class="form-control form_flower_cnt" name="flower_cnt_{{ el.flower_id }}" type="number" min="0" max="20" value="0">
+                                        {{ el.name }} ({{ el.price }} руб.)
+                                    </label>
+
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="center_div">
+            <button class="btn btn-success mt-3 btn-center" type="submit">Создать заказ</button>
+        </div>
+    </form>
+
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'main/js/add_order.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,117 @@
+.webpage {
+    min-height: 800px;
+}
+
+.bouquets {
+    margin: 50px auto;
+}
+
+.bouquet_link {
+    display: grid;
+    grid-template-columns: repeat(3, 0.7fr);
+    grid-gap: 30px;
+    width: 970px;
+    margin: 0;
+}
+
+.bouquet_item {
+    background-color: #EBEBEE;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 315px;
+}
+
+.bouquet_img {
+    margin: 15px 0 0 0;
+    /*padding: 15px 15px;*/
+    overflow: hidden;
+    width: 290px;
+    height: 295px;
+}
+
+.bouquet_img img {
+ -moz-transition: all 1s ease-out;
+ -o-transition: all 1s ease-out;
+ -webkit-transition: all 1s ease-out;
+ }
+
+.bouquet_img img:hover{
+ -webkit-transform: scale(1.1);
+ -moz-transform: scale(1.1);
+ -o-transform: scale(1.1);
+ }
+
+.images {
+    width: 290px;
+    height: 295px;
+    border-radius:15px;
+}
+
+.bouquet_title {
+    font-family:MontserratAlt_Light;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 30px;
+    max-width: 250px;
+    height: 90px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.bouquet_price {
+    font-family: MontserratAlt_Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 59px;
+    text-align: center;
+    color: #71A27C;
+    margin: 0 0 15px;
+}
+
+.container-c {
+    width: 1350px;
+}
+
+.main {
+    margin-top: 25px;
+    padding: 0 0 100px;
+    position: relative;
+}
+
+.category_main {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.category_block {
+    position: absolute;
+    width: 330px;
+    display: inline-flex;
+    border: 1px solid #71A27C;
+    background-color: rgba(113, 162, 124, 0.94);
+    margin-right: 15px;
+}
+.category_item {
+    height: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+.bouquet_main {
+    display: inline-flex;
+    width: 1000px;
+    position: absolute;
+    top: -52px;
+    right: -10px;
+}
+.bouquets, .container-b {
+    width: 1000px;
+}

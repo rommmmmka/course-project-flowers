@@ -3,7 +3,12 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path('orders_list', views.orders_list, name="orders_list"),
+    path('catalog', views.catalog, name="catalog"),
+    path('staff', views.staff, name="staff"),
+    path('orders', views.orders, name="orders"),
+    path('add_order', views.add_order, name="add_order"),
 
     path('action_login', views.action_login, name="action_login"),
+    path('action_logout', views.action_logout, name="action_logout"),
+    path('action_add_order', views.action_add_order, name="action_add_order"),
 ]

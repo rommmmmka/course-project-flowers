@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Каталог
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/catalog.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container-c">
+        <h1>Каталог</h1>
+        <div class="main">
+            <div class="category_block">
+                <div class="category_main">
+                    <div class="category_item">Категории:</div>
+                    {% for el in categories %}
+                        <div class="category_item"><a href="{% url 'catalog' %}?category={{ el.category_id }}" class="category_a">{{ el.name }}</a></div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="bouquet_main">
+                <div class="bouquets">
+                    <div class="container-b">
+                        <div class="bouquet_link">
+                            {% for el in flowers %}
+                                <div class="bouquet_item">
+                                    <div class="bouquet_img">
+                                        <img src="{{ el.photo.url }}" class="images">
+                                    </div>
+                                    <h2 class="bouquet_title">{{ el.name }}</h2>
+                                    <h3 class="bouquet_price">{{ el.price }} BYN</h3>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Заказы
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/orders.css' %}">
+{% endblock %}
+
+{% block content %}
+    {% if personal_orders == 'True' %}
+        <h1>Заказы, созданные вами</h1>
+        <div class="under_header"><a href="{% url 'orders' %}">Все заказы</a></div>
+    {% else %}
+        <h1>Все заказы</h1>
+        <div class="under_header"><a href="{% url 'orders' %}?personal_orders=True">Заказы, созданные вами</a></div>
+    {% endif %}
+    <div class="table_main">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Статус заказа</th>
+                        <th scope="col">Тип оплаты</th>
+                        <th scope="col">Дата доставки</th>
+                        <th scope="col">Стоимость</th>
+                        <th scope="col">Создатель</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for el in orders %}
+                        <tr>
+                            <th scope="row">{{ el.order_id }}</th>
+                            <th style="color: #{{ el.status_color }}">{{ el.status }}</th>
+                            <th>{{ el.payment_type.name }}</th>
+                            <th>{{ el.delivery_date }}</th>
+                            <th>{{ el.price }} руб.</th>
+                            <th>{{ el.staff_name }}</th>
+                            <th><a class="btn btn-primary button_small" href="#" role="button">Изменить</a></th>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="button_add_order">
+            <a class="btn btn-primary button_add_order_a" href="{% url 'add_order' %}" role="button">Добавить заказ</a>
+        </div>
+{% endblock %}

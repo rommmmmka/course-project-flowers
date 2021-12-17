@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Сотрудники
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/staff.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Список сотрудников</h1>
+        <div class="table_main">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Фамилия</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Отчество</th>
+                        <th scope="col">Телефон</th>
+                        <th scope="col">Должность</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for el in staff %}
+                        <tr {% if el.login == login %}class="selected_row"{% endif %}>
+                            <th scope="row">{{ el.staff_id }}</th>
+                            <th>{{ el.lname }}</th>
+                            <th>{{ el.fname }}</th>
+                            <th>{{ el.mname }}</th>
+                            <th>{{ el.phone }}</th>
+                            <th>{{ el.pos }}</th>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
