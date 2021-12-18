@@ -12,7 +12,7 @@
 }
 
 .flower {
-    width: 4500px;
+    width: 450px;
 
 }
 
@@ -29,4 +29,9 @@
 .btn-center {
     display: block;
     margin: 0 auto;
+    width: 160px;
+}
+
+.disabled_form {
+    cursor: not-allowed;
 }

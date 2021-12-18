@@ -26,7 +26,7 @@
                         <th scope="col">Тип оплаты</th>
                         <th scope="col">Дата доставки</th>
                         <th scope="col">Стоимость</th>
-                        <th scope="col">Создатель</th>
+                        <th scope="col">Сотрудник</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -39,7 +39,7 @@
                             <th>{{ el.delivery_date }}</th>
                             <th>{{ el.price }} руб.</th>
                             <th>{{ el.staff_name }}</th>
-                            <th><a class="btn btn-primary button_small" href="#" role="button">Изменить</a></th>
+                            <th><a class="btn btn-primary button_small" href="{% url 'edit_order' %}?order_id={{ el.order_id }}" role="button">Изменить</a></th>
                         </tr>
                     {% endfor %}
                 </tbody>

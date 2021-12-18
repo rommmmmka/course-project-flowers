@@ -53,6 +53,17 @@ def add_order(request):
     })
 
 
+def edit_order(request):
+    return render(request, 'main/edit_order.html', {
+        'order_id': request.GET.get('order_id'),
+        'order_status': OrderStatus.objects.all(),
+        'payment_type': PaymentType.objects.all(),
+        'category': Category.objects.all(),
+        'flowers': Flower.objects.raw('CALL get_order_flowers(%s)', [request.GET.get('order_id')]),
+        'order_info': Orders.objects.raw('CALL get_order_info(%s)', [request.GET.get('order_id')])[0],
+    })
+
+
 def action_login(request):
     if Staff.objects.filter(login=request.POST['login']).count() != 1:
         return redirect_with_get('index', {'error_login': True})
@@ -107,7 +118,43 @@ def action_add_order(request):
                 orders_id=order.order_id,
                 flower_id=el.flower_id,
             )
+            flower_list.save()
     order.price = price
     order.save()
+    return redirect('orders')
 
+
+def action_edit_order(request):
+    order = Orders.objects.get(order_id=request.GET.get('order_id'))
+    order.order_status_id = request.POST['order_status']
+    order.payment_type_id = request.POST['payment_type']
+    client = Client.objects.get(client_id=order.client_id)
+    client.lname = request.POST['lname']
+    client.fname = request.POST['fname']
+    client.mname = request.POST['mname']
+    client.save()
+    delivery = Delivery.objects.get(delivery_id=order.delivery_id)
+    delivery.date = request.POST['delivery_date']
+    delivery.address = request.POST['delivery_address']
+    delivery.save()
+    all_flowers = Flower.objects.all()
+    price = .0
+    for el in all_flowers:
+        if request.POST['flower_cnt_' + str(el.flower_id)] is not None:
+            price += float(el.price) * float(request.POST['flower_cnt_' + str(el.flower_id)])
+            flower_list = FlowerList(
+                count=request.POST['flower_cnt_' + str(el.flower_id)],
+                orders_id=order.order_id,
+                flower_id=el.flower_id,
+            )
+            flower_list.save()
+    order.price = price
+    order.save()
+    return redirect('orders')
+
+
+def action_delete_order(request):
+    order = Orders.objects.get(order_id=request.GET.get('order_id'))
+    print(order.order_id)
+    order.delete()
     return redirect('orders')
