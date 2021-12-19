@@ -116,7 +116,7 @@ def action_add_order(request):
     all_flowers = Flower.objects.all()
     price = .0
     for el in all_flowers:
-        if request.POST['flower_cnt_' + str(el.flower_id)] is not None:
+        if request.POST['flower_cnt_' + str(el.flower_id)] != '0':
             price += float(el.price) * float(request.POST['flower_cnt_' + str(el.flower_id)])
             flower_list = FlowerList(
                 count= request.POST['flower_cnt_' + str(el.flower_id)],
@@ -145,7 +145,7 @@ def action_edit_order(request):
     all_flowers = Flower.objects.all()
     price = .0
     for el in all_flowers:
-        if request.POST['flower_cnt_' + str(el.flower_id)] is not None:
+        if request.POST['flower_cnt_' + str(el.flower_id)] != '0':
             price += float(el.price) * float(request.POST['flower_cnt_' + str(el.flower_id)])
             flower_list = FlowerList(
                 count=request.POST['flower_cnt_' + str(el.flower_id)],

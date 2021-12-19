@@ -56,11 +56,11 @@
         {% for cat in category %}
             <div>
                 <div class="center_div">
-                    <button class="btn btn-primary mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <button class="btn btn-primary mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ cat.category_id }}" aria-expanded="false" aria-controls="collapseExample">
                     {{ cat.name }}
                 </button>
                 </div>
-                <div class="collapse" id="collapseExample">
+                <div class="collapse" id="collapse{{ cat.category_id }}">
                     <div class="card card-body">
                         {% for el in flowers %}
                             {% if el.category_id == cat.category_id %}
