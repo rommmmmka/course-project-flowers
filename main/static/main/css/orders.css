@@ -8,10 +8,6 @@
     margin: 0 auto;
 }
 
-.webpage {
-    height: 745px;
-}
-
 .table{
     width: 1150px;
     border-collapse: inherit;
@@ -47,4 +43,8 @@ th {
     margin: 20px auto 0;
     display: block;
     width: 150px;
+}
+
+.container_in {
+    padding-bottom: 50px;
 }

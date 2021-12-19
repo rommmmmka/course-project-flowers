@@ -11,7 +11,8 @@
 
 {% block content %}
     <div class="container">
-        <h1>Список сотрудников</h1>
+        <div class="container_in">
+            <h1>Список сотрудников</h1>
         <div class="table_main">
             <table class="table table-striped">
                 <thead>
@@ -38,6 +39,8 @@
                 </tbody>
             </table>
         </div>
+        </div>
+
         {% if is_admin %}
             <div class="btn_add_user">
                 <a class="btn btn-primary button_add_order_a" href="{% url 'add_staff' %}" role="button">Добавить сотрудника</a>

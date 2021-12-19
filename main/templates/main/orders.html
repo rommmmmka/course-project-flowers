@@ -10,14 +10,15 @@
 {% endblock %}
 
 {% block content %}
-    {% if personal_orders == 'True' %}
-        <h1>Заказы, созданные вами</h1>
-        <div class="under_header"><a href="{% url 'orders' %}">Все заказы</a></div>
-    {% else %}
-        <h1>Все заказы</h1>
-        <div class="under_header"><a href="{% url 'orders' %}?personal_orders=True">Заказы, созданные вами</a></div>
-    {% endif %}
-    <div class="table_main">
+    <div class="container_in">
+        {% if personal_orders == 'True' %}
+            <h1>Заказы, созданные вами</h1>
+            <div class="under_header"><a href="{% url 'orders' %}">Все заказы</a></div>
+        {% else %}
+            <h1>Все заказы</h1>
+            <div class="under_header"><a href="{% url 'orders' %}?personal_orders=True">Заказы, созданные вами</a></div>
+        {% endif %}
+        <div class="table_main">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -48,4 +49,6 @@
         <div class="button_add_order">
             <a class="btn btn-primary button_add_order_a" href="{% url 'add_order' %}" role="button">Добавить заказ</a>
         </div>
+    </div>
+
 {% endblock %}

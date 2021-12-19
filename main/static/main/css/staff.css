@@ -8,10 +8,6 @@
     margin: 0 auto;
 }
 
-.webpage {
-    height: 745px;
-}
-
 .table{
     width: 750px;
     border-collapse: inherit;
@@ -33,4 +29,8 @@
 .btn_add_user {
     margin-top: 25px;
     text-align: center;
+}
+
+.container_in {
+    padding-bottom: 50px;
 }

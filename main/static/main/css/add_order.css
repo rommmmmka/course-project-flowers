@@ -24,3 +24,7 @@
 .disabled_form {
     cursor: not-allowed;
 }
+
+.container_in {
+    padding-bottom: 50px;
+}

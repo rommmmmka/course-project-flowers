@@ -4,6 +4,8 @@ import hashlib
 
 
 def index(request):
+    if check_if_logged_in(request):
+        return redirect('catalog')
     return render(request, 'main/index.html', {
         'error_login': request.GET.get('error_login'),
         'error_password': request.GET.get('error_password'),
@@ -44,6 +46,8 @@ def orders(request):
 
 
 def add_order(request):
+    if not check_if_logged_in(request):
+        return redirect('index')
     return render(request, 'main/add_order.html', {
         'order_status': OrderStatus.objects.all(),
         'payment_type': PaymentType.objects.all(),
@@ -53,6 +57,8 @@ def add_order(request):
 
 
 def edit_order(request):
+    if not check_if_logged_in(request):
+        return redirect('index')
     return render(request, 'main/edit_order.html', {
         'order_id': request.GET.get('order_id'),
         'order_status': OrderStatus.objects.all(),
@@ -64,6 +70,10 @@ def edit_order(request):
 
 
 def add_staff(request):
+    if not check_if_logged_in(request):
+        return redirect('index')
+    if Staff.objects.get(login=request.COOKIES.get('login')).position.is_admin == 0:
+        return redirect('staff')
     return render(request, 'main/add_staff.html', {
         'positions': Position.objects.all(),
     })
@@ -93,6 +103,8 @@ def action_logout(request):
 
 
 def action_add_order(request):
+    if not check_if_logged_in(request):
+        return redirect('index')
     client = Client(
         lname=request.POST['lname'],
         fname=request.POST['fname'],
@@ -130,6 +142,8 @@ def action_add_order(request):
 
 
 def action_edit_order(request):
+    if not check_if_logged_in(request):
+        return redirect('index')
     order = Orders.objects.get(order_id=request.GET.get('order_id'))
     order.order_status_id = request.POST['order_status']
     order.payment_type_id = request.POST['payment_type']
@@ -159,12 +173,18 @@ def action_edit_order(request):
 
 
 def action_delete_order(request):
+    if not check_if_logged_in(request):
+        return redirect('index')
     order = Orders.objects.get(order_id=request.GET.get('order_id'))
     order.delete()
     return redirect('orders')
 
 
 def action_add_staff(request):
+    if not check_if_logged_in(request):
+        return redirect('index')
+    if Staff.objects.get(login=request.COOKIES.get('login')).position.is_admin == 0:
+        return redirect('staff')
     staff = Staff(
         login=request.POST['login'],
         password=str(hashlib.md5(request.POST['password'].encode('utf-8')).hexdigest()),
