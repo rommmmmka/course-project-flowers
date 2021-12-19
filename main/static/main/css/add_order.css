@@ -16,20 +16,9 @@
 
 }
 
-.center_div {
-    width: 500px;
-    margin: 0 auto;
-}
-
 .form_flower_cnt {
     width: 70px;
     display: inherit;
-}
-
-.btn-center {
-    display: block;
-    margin: 0 auto;
-    width: 160px;
 }
 
 .disabled_form {

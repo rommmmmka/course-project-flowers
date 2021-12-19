@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Заказы
+Изменение заказа
 {% endblock %}
 
 {% block css %}
@@ -20,13 +20,13 @@
             </div>
             <h3>Клиент</h3>
             <div>
-                <input type="text" class="form-control" name="lname" placeholder="Фамилия" minlength="5" maxlength="30" pattern="[А-я]+" value="{{ order_info.lname }}" required>
+                <input type="text" class="form-control" name="lname" placeholder="Фамилия" minlength="5" maxlength="30" pattern="[А-Яа-яЁё]+" value="{{ order_info.lname }}" required>
             </div>
             <div>
-                <input type="text" class="form-control" name="fname" placeholder="Имя" minlength="5" maxlength="30" pattern="[А-я]+" value="{{ order_info.fname }}" required>
+                <input type="text" class="form-control" name="fname" placeholder="Имя" minlength="5" maxlength="30" pattern="[А-Яа-яЁё]+" value="{{ order_info.fname }}" required>
             </div>
             <div>
-                <input type="text" class="form-control" name="mname" placeholder="Отчество (при наличии)" minlength="5" maxlength="30" pattern="[А-я]+" value="{{ order_info.mname }}">
+                <input type="text" class="form-control" name="mname" placeholder="Отчество (при наличии)" minlength="5" maxlength="30" pattern="[А-Яа-яЁё]+" value="{{ order_info.mname }}">
             </div>
             <div>
                 <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Номер телефона" value="{{ order_info.phone }}" required>
@@ -82,14 +82,8 @@
             </div>
         {% endfor %}
         <div class="center_div">
-            <button class="btn btn-success mt-3 btn-center" type="submit">Изменить заказ</button>
-            <button class="btn btn-danger mt-3 btn-center" type="button" onclick="location.href = '{% url 'action_delete_order' %}?order_id={{ order_id }}';">Удалить заказ</button>
+            <button class="btn btn-success mt-3 btn_center" type="submit">Изменить заказ</button>
+            <button class="btn btn-danger mt-3 btn_center" type="button" onclick="location.href = '{% url 'action_delete_order' %}?order_id={{ order_id }}';">Удалить заказ</button>
         </div>
     </form>
-
-
-{% endblock %}
-
-{% block js %}
-    <script src="{% static 'main/js/add_order.js' %}"></script>
 {% endblock %}

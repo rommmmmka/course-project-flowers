@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Заказы
+Добавление заказа
 {% endblock %}
 
 {% block css %}
@@ -16,13 +16,13 @@
             <h1>Добавление заказа</h1>
             <h3>Клиент</h3>
             <div>
-                <input type="text" class="form-control" name="lname" placeholder="Фамилия" minlength="5" maxlength="30" pattern="[А-я]+" required>
+                <input type="text" class="form-control" name="lname" placeholder="Фамилия" minlength="5" maxlength="30" pattern="[А-Яа-яЁё]+" required>
             </div>
             <div>
-                <input type="text" class="form-control" name="fname" placeholder="Имя" minlength="5" maxlength="30" pattern="[А-я]+" required>
+                <input type="text" class="form-control" name="fname" placeholder="Имя" minlength="5" maxlength="30" pattern="[А-Яа-яЁё]+" required>
             </div>
             <div>
-                <input type="text" class="form-control" name="mname" placeholder="Отчество (при наличии)" minlength="5" maxlength="30" pattern="[А-я]+">
+                <input type="text" class="form-control" name="mname" placeholder="Отчество (при наличии)" minlength="5" maxlength="30" pattern="[А-Яа-яЁё]+">
             </div>
             <div>
                 <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Номер телефона" required>
@@ -78,13 +78,7 @@
             </div>
         {% endfor %}
         <div class="center_div">
-            <button class="btn btn-success mt-3 btn-center" type="submit">Создать заказ</button>
+            <button class="btn btn-success mt-3 btn_center" type="submit">Создать заказ</button>
         </div>
     </form>
-
-
-{% endblock %}
-
-{% block js %}
-    <script src="{% static 'main/js/add_order.js' %}"></script>
 {% endblock %}

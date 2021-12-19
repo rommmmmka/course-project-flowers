@@ -108,3 +108,19 @@ a:hover {
 h1 {
     text-align: center;
 }
+
+.center_div {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.btn_center {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+}
+
+.btn_center_staff {
+    display: block;
+    margin: 0 auto;
+}

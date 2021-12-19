@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f89b3d8d-c9fd-4696-babe-5de53c41e87b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main/templates/main/edit_order.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/templates/main/add_staff.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/static/main/css/add_order.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/css/add_order.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/catalog.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/css/catalog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/orders.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/css/orders.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/css/staff.css" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/css/staff.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/static/main/js/add_order.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/static/main/js/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/add_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/add_order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/edit_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/edit_order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/templates/main/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/templates/main/staff.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/templates/main/staff.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
     </list>
@@ -108,7 +121,7 @@
       <workItem from="1639616227344" duration="32000" />
       <workItem from="1639616261985" duration="9563000" />
       <workItem from="1639684572837" duration="22371000" />
-      <workItem from="1639857650330" duration="8223000" />
+      <workItem from="1639857650330" duration="12674000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import *
 from .utils import *
-from datetime import datetime
 import hashlib
 
 
@@ -28,6 +26,7 @@ def staff(request):
     return render(request, 'main/staff.html', {
         'staff': Staff.objects.raw("CALL get_staff()"),
         'login': request.COOKIES.get('login'),
+        'is_admin': Staff.objects.get(login=request.COOKIES.get('login')).position.is_admin,
     })
 
 
@@ -61,6 +60,12 @@ def edit_order(request):
         'category': Category.objects.all(),
         'flowers': Flower.objects.raw('CALL get_order_flowers(%s)', [request.GET.get('order_id')]),
         'order_info': Orders.objects.raw('CALL get_order_info(%s)', [request.GET.get('order_id')])[0],
+    })
+
+
+def add_staff(request):
+    return render(request, 'main/add_staff.html', {
+        'positions': Position.objects.all(),
     })
 
 
@@ -155,6 +160,19 @@ def action_edit_order(request):
 
 def action_delete_order(request):
     order = Orders.objects.get(order_id=request.GET.get('order_id'))
-    print(order.order_id)
     order.delete()
     return redirect('orders')
+
+
+def action_add_staff(request):
+    staff = Staff(
+        login=request.POST['login'],
+        password=str(hashlib.md5(request.POST['password'].encode('utf-8')).hexdigest()),
+        lname=request.POST['lname'],
+        fname=request.POST['fname'],
+        mname=request.POST['mname'],
+        phone=request.POST['phonenumber'],
+        position_id=request.POST['position'],
+    )
+    staff.save()
+    return redirect('staff')

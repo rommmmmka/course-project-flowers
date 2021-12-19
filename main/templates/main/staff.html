@@ -38,5 +38,10 @@
                 </tbody>
             </table>
         </div>
+        {% if is_admin %}
+            <div class="btn_add_user">
+                <a class="btn btn-primary button_add_order_a" href="{% url 'add_staff' %}" role="button">Добавить сотрудника</a>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}

@@ -100,6 +100,7 @@ class PaymentType(models.Model):
 class Position(models.Model):
     position_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30, blank=True, null=True)
+    is_admin = models.BooleanField(blank=True, null=True)
 
     class Meta:
         managed = False
