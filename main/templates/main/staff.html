@@ -13,38 +13,37 @@
     <div class="container">
         <div class="container_in">
             <h1>Список сотрудников</h1>
-        <div class="table_main">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Фамилия</th>
-                        <th scope="col">Имя</th>
-                        <th scope="col">Отчество</th>
-                        <th scope="col">Телефон</th>
-                        <th scope="col">Должность</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for el in staff %}
-                        <tr {% if el.login == login %}class="selected_row"{% endif %}>
-                            <th scope="row">{{ el.staff_id }}</th>
-                            <th>{{ el.lname }}</th>
-                            <th>{{ el.fname }}</th>
-                            <th>{{ el.mname }}</th>
-                            <th>{{ el.phone }}</th>
-                            <th>{{ el.pos }}</th>
+            <div class="table_main">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Фамилия</th>
+                            <th scope="col">Имя</th>
+                            <th scope="col">Отчество</th>
+                            <th scope="col">Телефон</th>
+                            <th scope="col">Должность</th>
                         </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        </div>
-
-        {% if is_admin %}
-            <div class="btn_add_user">
-                <a class="btn btn-primary button_add_order_a" href="{% url 'add_staff' %}" role="button">Добавить сотрудника</a>
+                    </thead>
+                    <tbody>
+                        {% for el in staff %}
+                            <tr {% if el.login == login %}class="selected_row"{% endif %}>
+                                <th scope="row">{{ el.staff_id }}</th>
+                                <th>{{ el.lname }}</th>
+                                <th>{{ el.fname }}</th>
+                                <th>{{ el.mname }}</th>
+                                <th>{{ el.phone }}</th>
+                                <th>{{ el.pos }}</th>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
-        {% endif %}
+            {% if is_admin %}
+                <div class="btn_add_user">
+                    <a class="btn btn-primary button_add_order_a" href="{% url 'add_staff' %}" role="button">Добавить сотрудника</a>
+                </div>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}

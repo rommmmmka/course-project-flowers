@@ -11,39 +11,42 @@
 
 {% block content %}
     <div class="container-c">
-        <h1>Добавление сотрудника</h1>
-        <div class="center_div">
-            <form action="{% url 'action_add_staff' %}" method="post">
-                {% csrf_token %}
-                <div>
-                    <input type="text" class="form-control" name="login" placeholder="Логин" minlength="5" maxlength="30" pattern="[A-Za-z0-9_]+" required>
-                </div>
-                <div>
-                    <input type="password" class="form-control" name="password" placeholder="Пароль" minlength="5" maxlength="30" pattern="[A-Za-z0-9_]+" required>
-                </div>
-                <div>
-                    <input type="text" class="form-control" name="lname" placeholder="Фамилия" maxlength="30" pattern="[А-Яа-яЁё]+" required>
-                </div>
-                <div>
-                    <input type="text" class="form-control" name="fname" placeholder="Имя" maxlength="30" pattern="[А-Яа-яЁё]+" required>
-                </div>
-                <div>
-                    <input type="text" class="form-control" name="mname" placeholder="Отчество (при наличии)" maxlength="30" pattern="[А-Яа-яЁё]+">
-                </div>
-                <div>
-                    <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Номер телефона" minlength="5" maxlength="30" required>
-                </div>
-                <select class="form-select" name="position" required>
-                    <option value="" disabled selected hidden>Должность</option>
-                    {% for el in positions %}
-                        <option value="{{ el.position_id }}">{{ el.name }}</option>
-                    {% endfor %}
-                </select>
-                <button class="btn btn-success mt-3 btn_center_staff" type="submit">Создать пользователя</button>
-            </form>
-
+        <div class="container_in">
+            <h1>Добавление сотрудника</h1>
+            <div class="center_div">
+                {% if error_login_repeats == 'True' %}
+                    <div class="alert alert-danger mb-4" role="alert">Пользователь с таким логином уже существует</div>
+                {% endif %}
+                <form action="{% url 'action_add_staff' %}" method="post">
+                    {% csrf_token %}
+                    <div>
+                        <input type="text" class="form-control" name="login" placeholder="Логин" minlength="5" maxlength="30" pattern="[A-Za-z0-9_]+" required>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" name="password" placeholder="Пароль" minlength="5" maxlength="30" pattern="[A-Za-z0-9_]+" required>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" name="lname" placeholder="Фамилия" maxlength="30" pattern="[А-Яа-яЁё]+" required>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" name="fname" placeholder="Имя" maxlength="30" pattern="[А-Яа-яЁё]+" required>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" name="mname" placeholder="Отчество (при наличии)" maxlength="30" pattern="[А-Яа-яЁё]+">
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Номер телефона" minlength="5" maxlength="30" required>
+                    </div>
+                    <select class="form-select" name="position" required>
+                        <option value="" disabled selected hidden>Должность</option>
+                        {% for el in positions %}
+                            <option value="{{ el.position_id }}">{{ el.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button class="btn btn-success mt-3 btn_center_staff" type="submit">Создать пользователя</button>
+                </form>
+            </div>
         </div>
-
 
     </div>
 {% endblock %}

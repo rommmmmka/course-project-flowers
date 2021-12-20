@@ -76,6 +76,7 @@ def add_staff(request):
         return redirect('staff')
     return render(request, 'main/add_staff.html', {
         'positions': Position.objects.all(),
+        'error_login_repeats': request.GET.get('error_login_repeats'),
     })
 
 
@@ -185,6 +186,10 @@ def action_add_staff(request):
         return redirect('index')
     if Staff.objects.get(login=request.COOKIES.get('login')).position.is_admin == 0:
         return redirect('staff')
+    if Staff.objects.filter(login=request.POST['login']).count() == 1:
+        return redirect_with_get('add_staff', {
+            'error_login_repeats': True
+        })
     staff = Staff(
         login=request.POST['login'],
         password=str(hashlib.md5(request.POST['password'].encode('utf-8')).hexdigest()),

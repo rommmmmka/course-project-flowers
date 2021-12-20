@@ -124,3 +124,7 @@ h1 {
     display: block;
     margin: 0 auto;
 }
+
+.container_in {
+    padding-bottom: 50px;
+}
